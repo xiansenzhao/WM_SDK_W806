@@ -297,31 +297,7 @@
       <File Name="../../../../../../../app/src/wm_hal_msp.c">
         <FileOption/>
       </File>
-      <File Name="../../../../../../../app/src/wm_it.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/adc.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/gpio.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/iic.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/ina226.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/oled.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/pwm.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/spi.c">
-        <FileOption/>
-      </File>
-      <File Name="../../../../../../../app/src/timer.c"/>
+      <File Name="../../../../../../../app/src/wm_it.c"/>
     </VirtualDirectory>
     <VirtualDirectory Name="inc">
       <File Name="../../../../../../../app/inc/wm_it.h">
