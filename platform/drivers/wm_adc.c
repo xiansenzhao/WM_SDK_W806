@@ -154,6 +154,25 @@ int HAL_ADC_GET_INPUT_VOLTAGE(ADC_HandleTypeDef* hadc)
 	return value;
 }
 
+int HAL_ADC_GET_INPUT_TEMP(ADC_HandleTypeDef* hadc)
+{
+	int value;
+	double voltage = 0.0;
+	
+	assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
+	
+	HAL_ADC_Start(hadc);
+	HAL_ADC_PollForConversion(hadc);
+	HAL_ADC_Stop(hadc);
+	value = HAL_ADC_GetValue(hadc);
+	
+	value = ((value*1000/(int)(2*2*4)-4120702)*1000/15548);
+	
+	return value;
+}
+
+
+
 HAL_StatusTypeDef HAL_ADC_Start_IT(ADC_HandleTypeDef* hadc)
 {
 	assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));

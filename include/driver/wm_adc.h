@@ -42,6 +42,7 @@ typedef struct __ADC_HandleTypeDef
 #define ADC_CHANNEL_3		ADC_ANA_CR_CH_3
 #define ADC_CHANNEL_0_1		ADC_ANA_CR_CH_8
 #define ADC_CHANNEL_2_3		ADC_ANA_CR_CH_9
+#define ADC_CHANNEL_VOL		ADC_ANA_CR_CH_VOL
 #define ADC_CHANNEL_TEMP	ADC_ANA_CR_CH_TEMP
 #define ADC_CHANNEL_OFFSET	ADC_ANA_CR_CH_OFFSET
 
@@ -106,6 +107,8 @@ int                		HAL_ADC_GetValue(ADC_HandleTypeDef* hadc);
 
 // 该接口调用了以上接口，实现了一个完整的查询转换过程，并返回结果，可以直接调用该接口获取转换结果，返回值单位mv
 int 					HAL_ADC_GET_INPUT_VOLTAGE(ADC_HandleTypeDef* hadc);
+int 					HAL_ADC_GET_INPUT_TEMP(ADC_HandleTypeDef* hadc);
+
 
 // AD转换功能以中断方式实现所对应的开始、停止、中断回调函数
 HAL_StatusTypeDef       HAL_ADC_Start_IT(ADC_HandleTypeDef* hadc);
